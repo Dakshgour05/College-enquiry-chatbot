@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus AI | College Assistant</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}?v=3">
+</head>
+
+<body>
+
+<div class="page">
+
+    <nav class="navbar">
+        <div class="brand">
+            <div class="logo">🎓</div>
+            <div>
+                <h2>Campus<span>AI</span></h2>
+                <p>SMART STUDENT ASSISTANCE</p>
+            </div>
+        </div>
+        <div class="nav-status">
+            <span class="status-dot"></span> System Online
+        </div>
+    </nav>
+
+    <main class="main-content">
+
+        <section class="intro">
+            <span class="tag">✦ YOUR SMART COLLEGE COMPANION</span>
+            <h1>Welcome to Your<br>
+                <span>Campus Assistant.</span>
+            </h1>
+            <p>Get instant answers about admissions, courses, fees and
+            everything you need to know about college.</p>
+            
+            <div class="features">
+                <span>⚡ Quick Answers</span>
+                <span>🎯 Easy Enquiries</span>
+                <span>🤖 AI Assistant</span>
+            </div>
+        </section>
+
+        <section class="chat-container">
+
+            <div class="chat-header">
+                <div class="bot-icon">🤖</div>
+                <div class="bot-info">
+                    <h3>College Enquiry Bot</h3>
+                    <p><span class="status-dot"></span> Always here to help</p>
+                </div>
+                <div class="online-label">ONLINE</div>
+            </div>
+
+            <div class="chat-body" id="chatBody">
+                <div class="welcome">
+                    <div class="welcome-icon">👋</div>
+                    <h3>Hello, Student!</h3>
+                    <p>Welcome to Campus AI. What would you like
+                    to know today?</p>
+                </div>
+                <div class="message bot-message">
+                    I'm your college assistant. Ask me anything
+                    about admission, courses, fees and placements!
+                </div>
+            </div>
+
+            <div class="quick-title">POPULAR ENQUIRIES</div>
+
+            <div class="quick-buttons">
+                <button onclick="sendQuickMessage('Admission')">🎓 Admission</button>
+                <button onclick="sendQuickMessage('Courses')">📚 Courses</button>
+                <button onclick="sendQuickMessage('Fees')">💰 Fees</button>
+                <button onclick="sendQuickMessage('Placement')">💼 Placement</button>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="userInput"
+                placeholder="Type your question here...">
+                <button id="sendBtn" onclick="sendMessage()">➤</button>
+            </div>
+
+            <div class="footer">
+                POWERED BY <strong>PYTHON + FLASK</strong> · CAMPUS AI
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
